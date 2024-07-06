@@ -6,6 +6,8 @@ import {
 } from "react-router-dom";
 import Login from "../pages/login";
 import Dashboard from "../pages/dashboard/Dashboard";
+import AdminMenu from "../components/AdminMenu"
+import ColaboratorMenu from "../components/ColaboratorMenu";
 
 const router = createBrowserRouter([
     {
@@ -17,8 +19,12 @@ const router = createBrowserRouter([
         element: <Login />,
     },
     {
-        path: "/dashboard",
-        element: <Dashboard />,
+        path: "/admin",
+        element: <Dashboard><AdminMenu/></Dashboard>,
+    },
+    {
+        path: "/colaborator",
+        element: <Dashboard><ColaboratorMenu/></Dashboard>,
     }
   ]);
 
